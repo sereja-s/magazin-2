@@ -25,7 +25,7 @@
 								<h2><?php echo $product['name']; ?></h2>
 								<p>Код товара: <?php echo $product['code']; ?></p>
 								<span>
-									<span>р.<?php echo $product['price']; ?></span>
+									<span><?php echo $product['price']; ?> р.</span>
 									<a href="#" data-id="<?php echo $product['id']; ?>" class="btn btn-default add-to-cart">
 										<i class="fa fa-shopping-cart"></i>В корзину
 									</a>

@@ -22,6 +22,7 @@ class SiteController
 
 		// Подключаем вид
 		require_once(ROOT . '/views/site/index.php');
+
 		return true;
 	}
 
@@ -48,6 +49,7 @@ class SiteController
 
 			// Валидация полей
 			if (!User::checkEmail($userEmail)) {
+
 				$errors[] = 'Неправильный email';
 			}
 

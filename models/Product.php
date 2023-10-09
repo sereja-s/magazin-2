@@ -7,7 +7,7 @@ class Product
 {
 
 	// Количество отображаемых товаров по умолчанию
-	const SHOW_BY_DEFAULT = 6;
+	const SHOW_BY_DEFAULT = 5;
 
 	/**
 	 * Возвращает массив последних товаров
@@ -32,7 +32,7 @@ class Product
 		// Указываем, что хотим получить данные в виде массива
 		$result->setFetchMode(PDO::FETCH_ASSOC);
 
-		// Выполнение коменды
+		// Выполнение команды
 		$result->execute();
 
 		// Получение и возврат результатов
@@ -57,7 +57,7 @@ class Product
 	public static function getProductsListByCategory($categoryId, $page = 1)
 	{
 		$limit = Product::SHOW_BY_DEFAULT;
-		// Смещение для запроса (при построении постраничной навигации)
+		// Смещение от начала для запроса (при построении постраничной навигации)
 		$offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
 		// Соединение с БД
@@ -110,7 +110,7 @@ class Product
 		// Указываем, что хотим получить данные в виде массива
 		$result->setFetchMode(PDO::FETCH_ASSOC);
 
-		// Выполнение коменды
+		// Выполнение команды
 		$result->execute();
 
 		// Получение и возврат результатов

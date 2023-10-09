@@ -30,15 +30,19 @@ class UserController
 
 			// Валидация полей
 			if (!User::checkName($name)) {
+
 				$errors[] = 'Имя не должно быть короче 2-х символов';
 			}
 			if (!User::checkEmail($email)) {
+
 				$errors[] = 'Неправильный email';
 			}
 			if (!User::checkPassword($password)) {
+
 				$errors[] = 'Пароль не должен быть короче 6-ти символов';
 			}
 			if (User::checkEmailExists($email)) {
+
 				$errors[] = 'Такой email уже используется';
 			}
 
@@ -65,8 +69,8 @@ class UserController
 
 		// Обработка формы
 		if (isset($_POST['submit'])) {
-			// Если форма отправлена 
-			// Получаем данные из формы
+
+			// Если форма отправлена получаем данные из формы			
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 
@@ -75,9 +79,12 @@ class UserController
 
 			// Валидация полей
 			if (!User::checkEmail($email)) {
+
 				$errors[] = 'Неправильный email';
 			}
+
 			if (!User::checkPassword($password)) {
+
 				$errors[] = 'Пароль не должен быть короче 6-ти символов';
 			}
 
@@ -85,9 +92,11 @@ class UserController
 			$userId = User::checkUserData($email, $password);
 
 			if ($userId == false) {
+
 				// Если данные неправильные - показываем ошибку
 				$errors[] = 'Неправильные данные для входа на сайт';
 			} else {
+
 				// Если данные правильные, запоминаем пользователя (сессия)
 				User::auth($userId);
 
@@ -98,6 +107,7 @@ class UserController
 
 		// Подключаем вид
 		require_once(ROOT . '/views/user/login.php');
+
 		return true;
 	}
 

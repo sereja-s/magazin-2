@@ -25,16 +25,15 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/images/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/template/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
-<!--/head-->
+
 
 <body>
 	<div class="page-wrapper">
 
-
 		<header id="header">
-			<!--header-->
+
 			<div class="header_top">
-				<!--header_top-->
+
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
@@ -56,10 +55,10 @@
 					</div>
 				</div>
 			</div>
-			<!--/header_top-->
+
 
 			<div class="header-middle">
-				<!--header-middle-->
+
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
@@ -88,10 +87,10 @@
 					</div>
 				</div>
 			</div>
-			<!--/header-middle-->
+
 
 			<div class="header-bottom">
-				<!--header-bottom-->
+
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
@@ -120,7 +119,5 @@
 					</div>
 				</div>
 			</div>
-			<!--/header-bottom-->
 
 		</header>
-		<!--/header-->

@@ -24,6 +24,7 @@ class Order
 		$sql = 'INSERT INTO product_order (user_name, user_phone, user_comment, user_id, products) '
 			. 'VALUES (:user_name, :user_phone, :user_comment, :user_id, :products)';
 
+		// перед передачей товаров из корзины в запрос преобразуем их из массива в json-строку
 		$products = json_encode($products);
 
 		$result = $db->prepare($sql);

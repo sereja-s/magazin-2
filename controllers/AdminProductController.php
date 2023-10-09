@@ -20,6 +20,7 @@ class AdminProductController extends AdminBase
 
 		// Подключаем вид
 		require_once(ROOT . '/views/admin_product/index.php');
+
 		return true;
 	}
 
@@ -54,6 +55,7 @@ class AdminProductController extends AdminBase
 
 			// При необходимости можно валидировать значения нужным образом
 			if (!isset($options['name']) || empty($options['name'])) {
+
 				$errors[] = 'Заполните поля';
 			}
 

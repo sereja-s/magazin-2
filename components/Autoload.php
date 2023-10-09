@@ -1,11 +1,14 @@
 <?php
 
 /**
- * Функция __autoload для автоматического подключения классов
+ * Функция для автоматического подключения классов 
+ * (для доступа к ней в любой точке программы, подключаем её в корне в точке входа: index.php (он же FRONT CONTROLLER))
  */
 spl_autoload_register(function ($class_name) {
+
 	// Массив папок, в которых могут находиться необходимые классы
 	$array_paths = array(
+
 		'/models/',
 		'/components/',
 		'/controllers/',
@@ -19,6 +22,7 @@ spl_autoload_register(function ($class_name) {
 
 		// Если такой файл существует, подключаем его
 		if (is_file($path)) {
+
 			include_once $path;
 		}
 	}
